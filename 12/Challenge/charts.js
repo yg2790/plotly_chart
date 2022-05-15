@@ -128,11 +128,11 @@ function buildCharts(sample) {
     var wfreq_value = firstMetadata.wfreq;
 
     // 4. Create the trace for the gauge chart.
-    var gaugeData = {
+    var gaugeData = [{
       type: "indicator",
       mode: "gauge+number",
       value: wfreq_value,
-      title: {text: 'Belly Button Washing Frequency <br> Scrubs Per Week'},
+      title: {text: 'Belly Button Washing Frequency <br> Scrubs Per Week', font: {size:24}},
       gauge: {
         axis: { 
             range: [0, 10], 
@@ -150,13 +150,13 @@ function buildCharts(sample) {
           { range: [4, 6], color: "yellow" },
           { range: [6, 8], color: "limegreen" },
           { range: [8, 10], color: "darkgreen" }]},
-    };
+    }];
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = {
       margin: {
         t:0, 
-        b: 0 
+        b:0 
       },
       width:500,
       height:400,
